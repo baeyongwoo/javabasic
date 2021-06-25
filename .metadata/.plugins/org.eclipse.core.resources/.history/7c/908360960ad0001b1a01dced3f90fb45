@@ -1,0 +1,6 @@
+public class Method6 {
+	// mul 메서드를 선언해주세요
+	public static int mul(int x, int y, int z) {
+		return x * y * z;
+	}
+}

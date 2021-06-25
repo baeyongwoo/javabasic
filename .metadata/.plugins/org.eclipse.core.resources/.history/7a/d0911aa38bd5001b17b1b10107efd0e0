@@ -1,0 +1,31 @@
+package Interaction.game;
+
+public class User {
+	private int hp;
+	private int mp;
+	private int atk;
+	private int def;
+	private int lv;
+	private int exp;
+	public User(int hp, int mp, int atk, int def, int lv, int exp) {
+		
+		this.hp = hp;
+		this.mp = mp;
+		this.atk = atk;
+		this.def = def;
+		this.lv = lv;
+		this.exp = exp;
+	}
+	
+	public void showStatus() {
+		System.out.println("체력 : " + getHp());
+		System.out.println("마나 : " + getMp());
+		System.out.println("공격력 : " + getAtk());
+		System.out.println("방어력 : " + getDef());
+		System.out.println("레벨 : " + getLv());
+		System.out.println("경험치 : " + getExp());
+	}
+
+	
+	
+}

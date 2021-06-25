@@ -1,0 +1,17 @@
+package GBBGame;
+
+class match {
+	int GN, win, draw, lose;	//GN : Game Number 게임판수 
+	
+	match(String my, String com){
+		if(my.equals(com)) {
+			
+		}else if (my.equals("가위") &&com.equals("보") || my.equals("바위") && com.equals("가위")
+				|| my.equals("보") && com.equals("바위")) {
+			System.out.println("유저가 이겼습니다.");
+		}else {
+			System.out.println("컴퓨터가 이겼습니다.");
+		}
+	}
+	
+}

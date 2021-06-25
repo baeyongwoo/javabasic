@@ -1,0 +1,9 @@
+package constructor;
+
+public class Main2 {
+	public static void main(String[] args) {
+		Student st1 = new Student("김철수", 23, 56);
+		
+		st1.getInfo();
+	}
+}

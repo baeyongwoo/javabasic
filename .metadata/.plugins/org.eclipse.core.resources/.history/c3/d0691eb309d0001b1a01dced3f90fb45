@@ -1,0 +1,9 @@
+public class Method5 {
+
+	public static void plus(int c, int num) {
+		System.out.println(c + num);
+	}
+	public static void main(String[] args) {
+		
+	}
+}

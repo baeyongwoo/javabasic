@@ -1,0 +1,11 @@
+package Inheritance.game;
+
+public class commoner {
+	//레벨, 체력, 아이디, 마나수치를 변수로 만들기
+	public int level;
+	public int hp;
+	private String id;
+	public int steminer;
+	
+	//메서드는 getInfo()로 콘솔에 변수 상태를 조회할 수 있도록
+}

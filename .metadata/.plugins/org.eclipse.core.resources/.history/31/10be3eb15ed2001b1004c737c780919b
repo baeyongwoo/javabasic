@@ -1,0 +1,16 @@
+package constructor;
+
+public class Main3 {
+	public static void main(String[] args) {
+		System.out.println("선수 정보 입력");
+		BasketballPlayer b1 = new BasketballPlayer(170, 130);
+		BasketballPlayer b2 = new BasketballPlayer(199, 50);
+		
+		
+		b1.getInfo();
+		b1.dumk();
+		b2.getInfo();
+		b2.dumk();
+		
+	}
+}

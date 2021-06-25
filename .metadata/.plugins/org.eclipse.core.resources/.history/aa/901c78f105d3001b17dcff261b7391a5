@@ -1,0 +1,12 @@
+package Inheritance.game;
+
+public class Archer extends Commoner{
+	public int Street;
+	
+	@Override
+	public void getInfo() {
+		// TODO Auto-generated method stub
+		super.getInfo();
+		System.out.println("거리에 따른 데미지  : " + Street);
+	}
+}

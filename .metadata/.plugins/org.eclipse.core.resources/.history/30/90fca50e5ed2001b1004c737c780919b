@@ -1,0 +1,13 @@
+package constructor;
+
+public class Main3 {
+	public static void main(String[] args) {
+		BasketballPlayer b1 = new BasketballPlayer(170, 130);
+		BasketballPlayer b2 = new BasketballPlayer(199, 50);
+		System.out.println("-------------------------");
+		System.out.println("A의 선수 : " +  b1.dumk());
+		;
+		b2.dumk();
+		
+	}
+}

@@ -1,0 +1,32 @@
+package buyandsell;
+
+public class kiwiSeller{
+	
+	private int money;
+	private int kiwi;
+	
+	public kiwiSeller(int money, int kiwi) {
+		this.money = money;
+		this.kiwi = kiwi;
+	}
+	
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	public int getKiwi() {
+		return kiwi;
+	}
+	public void setKiwi(int kiwi) {
+		this.kiwi = kiwi;
+	}
+	
+	public void showSellor() {
+		System.out.println("===========판매자=============");
+		System.out.println("현재 남은 망고 : " + getMango());
+		System.out.println("오늘 수익  : " + getMoney());
+		
+	}
+}

@@ -1,0 +1,10 @@
+package Interaction.game;
+
+public class User {
+	private int hp;
+	private int mp;
+	private int atk;
+	private int def;
+	private int lv;
+	private int exp;
+}

@@ -1,0 +1,15 @@
+package overloading;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		OverTest ot1 = new OverTest();
+		ot1.showData();
+		OverTest ot2 = new OverTest(3);
+		ot2.showData();
+
+	}
+
+
+
+}

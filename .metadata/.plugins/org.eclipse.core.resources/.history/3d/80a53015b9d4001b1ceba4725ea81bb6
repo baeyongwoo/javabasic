@@ -1,0 +1,23 @@
+package buyandsell;
+
+public class kiwiSeller extends Seller{
+	private int money;
+	private int kiwi;
+	
+	
+	
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	public int getKiwi() {
+		return kiwi;
+	}
+	public void setKiwi(int kiwi) {
+		this.kiwi = kiwi;
+	}
+	
+	
+}

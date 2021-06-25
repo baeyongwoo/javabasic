@@ -1,0 +1,22 @@
+package GBBGame;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String ip = User.usershow();
+		String com = Com.show();
+		while(true) {			
+		System.out.println("가위 바위 보! >> ");
+		
+		
+		System.out.printf("사용자 : " + ip + "\t컴퓨터 " + com);
+		System.out.println();
+		
+		match match = new match();
+		match.MatchGame(ip, com);
+		
+		
+		}
+	}
+
+}

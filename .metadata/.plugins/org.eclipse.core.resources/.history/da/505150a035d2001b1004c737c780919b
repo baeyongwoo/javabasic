@@ -1,0 +1,48 @@
+package structure;
+
+public class Structure2 {
+
+	public  static void getInfo(Person p) {
+		System.out.println(p.name);
+		System.out.println(p.age);
+		System.out.println(p.pNum);
+		System.out.println(p.address);
+		
+		
+	}
+	
+	public static void getCatInfo(Cat c) {
+		System.out.println(c.name);
+		System.out.println(c.age);
+		System.out.println(c.jong);
+		
+	}
+	public static void main(String[] args) {
+//		Person a = new Person();
+//		a.name = "홍길동";
+//		a.age = 24;
+//		a.pNum = "010-1111-3333";
+//		a.address = "서울";
+//		getInfo(a);
+//		
+//		Person b = new Person();
+//		b.name = "동동동동";
+//		b.age = 27;
+//		b.pNum = "010-1421-3143";
+//		b.address = "경기";
+//		getInfo(b);
+		
+		System.out.println("==========================");
+		Cat c1 = new Cat("페르시안", 2, "고양이과");
+		c1.name = "페르시안";
+		c1.age = 2;
+		c1.jong = "A";
+		Cat c2 = new Cat();
+		c2.name = "와일드카고";
+		c2.age = 1;
+		c2.jong = "B";
+		getCatInfo(c1);
+		getCatInfo(c2);
+		
+	}
+}

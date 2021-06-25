@@ -1,0 +1,12 @@
+package polymorphism;
+
+//부모클래스를 Person으로 가지는 클래스
+public class Student extends Person{
+	private int grage;
+	
+	//super()를 이용해 초기화 하는 생성자를 만들어주세요.
+	public Student() {
+		super(name, grage);
+	}
+	
+}

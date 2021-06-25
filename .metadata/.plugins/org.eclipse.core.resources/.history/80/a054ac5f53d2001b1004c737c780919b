@@ -1,0 +1,18 @@
+package garbage;
+
+public class Main {
+	public static void main(String[] args) {
+		Item it1 = new Item(1);
+		Item it2 = new Item(2);
+		//it2 = null;
+		
+		Item it3 = new Item(3);
+		System.gc();
+		Item it4 = new Item(4);
+		//it4 = null;
+		Item it5 = new Item(5);
+		System.gc();
+		Item it6 = new Item(6);
+		
+	}
+}

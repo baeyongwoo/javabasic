@@ -1,0 +1,13 @@
+package polymorphism;
+
+public class teacher extends Person{
+	private int year; //교사 생활
+	private String 
+	
+	public teacher(String name, int age) {
+		super(name, age);
+		this.year = year;
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package Interaction.game;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		Monster m1 = new Dragon();
+		Warrior w1 = new Warrior();
+		w1.showStatus();
+		w1.huntDragon(m1);
+		w1.huntDragon(m1);
+		w1.huntDragon(m1);
+
+	}
+
+}

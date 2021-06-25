@@ -1,0 +1,12 @@
+package Inheritance.game;
+
+public class Magicion extends Commoner{
+	public int AP;
+	
+	@Override
+	public void getInfo() {
+		// TODO Auto-generated method stub
+		super.getInfo();
+	}
+
+}

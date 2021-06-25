@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Continue2 {
+	public static void main(String[] args) {
+		//1부터 n까지 총합을 구하되 홀수끼리만 더한 총합
+		//Continue를 반드시 사용
+		
+		Scanner scan = new Scanner(System.in);
+		int end = scan.nextInt();
+	}
+}

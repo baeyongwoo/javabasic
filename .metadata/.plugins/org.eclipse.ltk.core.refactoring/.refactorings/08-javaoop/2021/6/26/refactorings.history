@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Parent.java&apos; to &apos;08-javaoop/src/accessmodifier2&apos;&#x0D;&#x0A;- Original project: &apos;08-javaoop&apos;&#x0D;&#x0A;- Destination element: &apos;08-javaoop/src/accessmodifier2&apos;&#x0D;&#x0A;- Original element: &apos;Parent.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;accessmodifier2" element1="/src&lt;{Parent.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1624409771358" units="1" version="1.0"/>
+</session>

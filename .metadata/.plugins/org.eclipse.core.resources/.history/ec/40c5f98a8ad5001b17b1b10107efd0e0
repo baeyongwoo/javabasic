@@ -1,0 +1,12 @@
+package Interaction.game;
+
+public class Troll {
+	public Troll() {
+		super(10, 2 ,1, "오크");
+	}
+	
+	public void doBattle(int uAtk) {
+		super.doBattle(uAtk);
+	}
+
+}

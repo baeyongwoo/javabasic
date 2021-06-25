@@ -1,0 +1,22 @@
+package Interaction.game;
+
+public class Dragon extends Monster{
+
+	public Dragon() {
+		super(15,3 , 1, "드래곤");
+	}
+	
+	public void doBattle(int uAtk) {
+		this.hp = (this.hp + this.def) - uAtk;
+		if(this.hp <= 0) {
+			System.out.println("이 드래곤은 이미 죽었습니다.");
+		}
+	}
+	
+	public int getAtk() {
+		return this.atk;
+	}
+	public int getHp() {
+		return this.hp;
+	}
+}

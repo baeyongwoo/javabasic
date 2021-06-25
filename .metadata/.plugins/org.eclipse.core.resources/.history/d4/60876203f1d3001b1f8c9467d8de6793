@@ -1,0 +1,6 @@
+package accessmodifier.game;
+
+import java.util.Scanner;
+
+public class JobInfo {
+	

@@ -1,0 +1,6 @@
+package buyandsell;
+
+public class kiwiSeller {
+	private int money;
+	private int num;
+}

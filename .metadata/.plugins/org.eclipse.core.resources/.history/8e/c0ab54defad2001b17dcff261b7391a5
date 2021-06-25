@@ -1,0 +1,15 @@
+package inheritance;
+
+public class Main2 {
+	public static void main(String[] args) {
+		Salaryman salman = new Salaryman();
+		Student stu = new Student();
+		
+		salman.setName("배용우");
+		salman.setAge(25);
+		salman.salary();
+		salman.getSalaryInfo();
+		stu.getStudentInfo();
+	
+	}
+}

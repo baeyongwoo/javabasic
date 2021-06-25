@@ -1,0 +1,9 @@
+package Interaction.game;
+
+public class Warrior extends User {
+
+	public Warrior() {
+		
+	}
+
+}

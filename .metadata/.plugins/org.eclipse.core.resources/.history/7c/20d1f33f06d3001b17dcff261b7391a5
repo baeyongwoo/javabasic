@@ -1,0 +1,9 @@
+package Inheritance.game;
+
+public class Main3 {
+	public static void main(String[] args) {
+		Magicion magic = new Magicion();
+		magic.AP = 300;
+		magic.getInfo();
+	}
+}

@@ -1,0 +1,15 @@
+public class foreach {
+	public static void main(String[] args) {
+		//
+//		형태
+//		for (String string : args) {
+//			
+//		}
+		int[] arr1 = {100, 211, 339, 475, 591};
+		
+		for (int i : arr1) {
+			System.out.println(i);
+			
+		}
+	}
+}

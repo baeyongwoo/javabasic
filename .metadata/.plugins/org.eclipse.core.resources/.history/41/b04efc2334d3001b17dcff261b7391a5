@@ -1,0 +1,16 @@
+package accessmodifier;
+
+public class Main {
+	public static void main(String[] args) {
+		Warrior warrior = new Warrior("zxc213");
+		warrior.hunt();
+		warrior.hunt();
+		warrior.hunt();
+		System.out.println();
+		System.out.println(warrior.id + "님의 현재 정보");
+		System.out.println(warrior.level);
+		System.out.println(warrior.exp);
+		System.out.println(warrior.hp);
+		System.out.println(warrior.atk);
+	}
+}

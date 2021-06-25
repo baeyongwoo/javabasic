@@ -1,0 +1,22 @@
+package Inheritance.game;
+
+public class Main1 {
+	public static void main(String[] args) {
+		//초보자계정 생성 확인
+		Commoner c1 = new Commoner();
+		c1.setId("abc1234");
+		c1.hp = 100;
+		c1.level = 1;
+		c1.steminer = 100;
+		c1.getInfo();
+		
+		Warrior w1 = new Warrior();
+		w1.setId("zxcv123");
+		w1.hp = 500;
+		w1.level = 10;
+		w1.steminer = 300;
+		w1.attack_num = 300;
+		w1.getInfo();
+		
+	}
+}

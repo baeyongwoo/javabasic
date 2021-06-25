@@ -1,0 +1,14 @@
+package Interaction.game;
+
+public class Orc {
+	
+	public Orc() {
+		super(15,3 , 1, "드래곤");
+	}
+	
+	public void doBattle(int uAtk) {
+		super.doBattle(uAtk);
+	}
+}
+	
+	

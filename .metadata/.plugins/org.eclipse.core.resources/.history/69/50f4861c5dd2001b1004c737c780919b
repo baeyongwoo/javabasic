@@ -1,0 +1,18 @@
+package constructor;
+
+public class BasketballPlayer {
+
+	public double ki;
+	public int jump;
+	
+	public void BasketballPlayer(double k, int j) {
+		ki = k;
+		jump = j;
+	}
+	
+	public void dumk() {
+		if((ki + jump) >= 300) {
+			System.out.println("덩크슛에 성공했습니다.");
+		}else System.out.println("골대에 닿지 않았습니다.");
+	}
+}

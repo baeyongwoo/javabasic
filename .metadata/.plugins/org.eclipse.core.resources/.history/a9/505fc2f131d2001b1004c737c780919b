@@ -1,0 +1,21 @@
+package structure;
+
+public class Structure2 {
+
+	public  static void getInfo(Person p) {
+		System.out.println(p.name);
+		System.out.println(p.age);
+		System.out.println(p.pNum);
+		System.out.println(p.address);
+		
+		
+	}
+	public static void main(String[] args) {
+		Person a = new Person();
+		a.name = "홍길동";
+		a.age = 24;
+		a.pNum = "010-1111-3333";
+		a.address = "서울";
+		getInfo(a);
+	}
+}

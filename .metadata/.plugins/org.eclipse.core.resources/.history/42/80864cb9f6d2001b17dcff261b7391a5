@@ -1,0 +1,16 @@
+package GBBGame;
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		Com com = new Com();
+		User user = new User();
+		
+		match match = new match();
+		user.usershow();
+		match.MatchGame(user, com);
+		
+	}
+
+}

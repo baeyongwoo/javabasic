@@ -1,0 +1,11 @@
+package GBBGame;
+
+import java.util.Scanner;
+
+class User{
+	 String usershow() {
+		Scanner scan = new Scanner(System.in);
+		String ip = scan.next();	//ip == input
+		return ip;
+	}
+}

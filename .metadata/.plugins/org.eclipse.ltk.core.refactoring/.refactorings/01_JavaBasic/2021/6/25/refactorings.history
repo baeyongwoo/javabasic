@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DateInt.java&apos; to &apos;01_JavaBasic/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;01_JavaBasic&apos;&#x0D;&#x0A;- Destination element: &apos;01_JavaBasic/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;DateInt.java&apos;" description="Copy compilation unit" destination="/src&lt;" element1="/src&lt;{DateInt.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1623743522258" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,14 @@
+public class Parent {
+	public int a;
+	protected int b;
+	private int c;
+	
+	int d;
+	
+	public Parent() {
+		this.a = 1;
+		this.b = 2;
+		this.c = 3;
+		this.d = 4;
+	}
+}
