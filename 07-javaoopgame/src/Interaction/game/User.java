@@ -1,6 +1,8 @@
 package Interaction.game;
 
-public class User {
+import java.io.ObjectInputStream.GetField;
+
+public class User{
 	private int hp;
 	private int mp;
 	private int atk;
@@ -8,9 +10,14 @@ public class User {
 	private int lv;
 	private int exp;
 	private String name;
-	
-	public User(int hp, int mp, int atk, int def, String name) {
-		
+	private String skname;
+	private int satk;
+	private int mpc;//소비량
+
+	//hp, mp, atk, def, 직업이름, 스킬이름, 스킬공격력
+	public User(int hp, int mp, int atk, int def
+			, String name, String skname, int satk, int mpc) {
+
 		this.hp = hp;
 		this.mp = mp;
 		this.atk = atk;
@@ -18,8 +25,11 @@ public class User {
 		this.lv = 1;
 		this.exp = 0;
 		this.name = name;
+		this.skname = skname;
+		this.satk = satk;
+		this.mpc = mpc;
 	}
-	
+
 	public void showStatus() {
 		System.out.println("직업 : " + getName());
 		System.out.println("체력 : " + getHp());
@@ -27,11 +37,14 @@ public class User {
 		System.out.println("공격력 : " + getAtk());
 		System.out.println("방어력 : " + getDef());
 		System.out.println("레벨 : " + getLv());
+		LevelUp(getLv());
 		System.out.println("경험치 : " + getExp());
+		System.out.println("보유하고 있는 스킬 : " + getSkill_name());
+		System.out.println("==========================");
 	}
-	
 
-	
+
+
 	public String getName() {
 		return name;
 	}
@@ -87,34 +100,129 @@ public class User {
 	public void setExp(int exp) {
 		this.exp = exp;
 	}
-	
-	// 특정 몬스터인 오크를 공격하는 공격 메서드
-		public void huntOrc(Monster orc) {
-			// 공격 전에 먼저 오크의 체력을 체크해서 죽은 오크라면
-			// 따로 공격을 할 수 없도록 메서드를 바로 탈출시킵니다.
-			if(orc.getHp() <= 0) {
-				System.out.println("이미 죽은 오크를 공격할 수 없습니다.");
-				return;
-			}
-			// 오크와 전투를 할 때는 자신의 공격력을 넘깁니다.
-			orc.doBattle(this.atk);
-			// 오크쪽 처리가 되고 나서 유저가 공격을 받았을 때
-			// 유저가 죽는 상황이라면 역시 전투 메서드 종료
-			if(orc.getAtk() > (this.hp + this.def)) {
-				System.out.println("유저가 사망했습니다.");
-				return;
-			}
-			// 만약 전투 도중 오크가 죽었다면 경험치 20을 획득
-			if(orc.getHp() <= 0) {
-				System.out.println("경험치를 20 획득했습니다.");
-				this.exp += 20;
-			}
-			// 모든 전투상황이 끝난뒤에 본인의 체력을 깎습니다.
-			this.hp = (this.hp + this.def) - orc.getAtk();
-			System.out.println("오크와의 교전 완료!");
-			
-		}
+	public String getSkill_name() {
+		return skname;
+	}
+	public void setSkill_name(String skill_name) {
+		this.skname = skill_name;
+	}
+	public int getSkill_atk() {
+		return satk;
+	}
+	public void setSkill_atk(int skill_atk) {
+		this.satk = skill_atk;
+	}
+	public int getMpc() {
+		return mpc;
+	}
 
+	public void setMpc(int mpc) {
+		this.mpc = mpc;
+	}
+
+	public void hunt(Monster m) {
+		if(m.getHp() <= 0) {
+			System.out.println("이미 죽은 " +m.getName()  +" 를 공격할 수 없습니다.");
+			return;
+		}
+		m.doBattle(this.atk);
+		if(m.getAtk() > (this.hp + this.def)) {
+			System.out.println("유저가 사망했습니다.");
+			return;
+		}
+		if(m.getHp() <= 0) {
+			setExp(m.getExp() + getExp());
+			System.out.println("경험치를 " + m.getExp() + " 획득했습니다.");
+
+		}
+		this.hp = (this.hp - this.def) - m.getAtk();
+		System.out.println(m.getName() + "와의 교전 완료!");
+		
+		m.doBattle(this.satk, this.skname);
+		if(m.getAtk() > (this.hp + this.def)) {
+			System.out.println("유저가 사망했습니다.");
+			return;
+		}
+	}
+	/*
+	 * 1 - > 2 30
+	 * 2 - > 3 60
+	 * 3 - > 4 90
+	 * 4 - > 5 120
+	 */
+	public int LevelUp(int lv) {
+		
+		switch (getLv()) {
+		case 1:
+			if(getExp() >=30) {
+				setLv(getLv() + 1);
+				System.out.println("!!!!!!!!!!!레벨업 하였습니다.!!!!!!!!!!!!");
+				System.out.println("현재 레벨 : " + getLv());
+				setExp(getExp() - 30); 
+			}
+			break;
+		case 2:
+			if(getExp() >=60) {
+				setLv(getLv() + 1);
+				System.out.println("!!!!!!!!!!레벨업 하였습니다.!!!!!!!!!!!");
+				System.out.println("현재 레벨 : " + getLv());
+				setExp(getExp() - 60); 
+			}
+		case 3:
+			if(getExp() >=90) {
+				setLv(getLv() + 1);
+				System.out.println("!!!!!!!!!!!레벨업 하였습니다.!!!!!!!!!!!!!!!");
+				System.out.println("현재 레벨 : " + getLv());
+				setExp(getExp() - 90); 
+			}
+		case 4:
+			if(getExp() >=120) {
+				setLv(getLv() + 1);
+				System.out.println("!!!!!!!!!!!!!레벨업 하였습니다.!!!!!!!!!!!!!!");
+				System.out.println("현재 레벨 : " + getLv());
+				setExp(getExp() - 120); 
+			}
+			break;
+		default:
+			System.out.println("경험치가 부족합니다.");
+			break;
+		}
+		return getLv();
+	}//level업 메소드
+	
+	public void skillAtack(Monster m) {
+		
+		System.out.println("스킬 시전을 시작합니다. " + getSkill_name() + "");
+		if(getMp() <= 0) {
+			System.out.println("마나가 부족해서 스킬을 사용할 수 없습니다.");
+			return ;
+		}else {
+			setMp(getMp() - mpc);
+			System.out.println(getMpc() + "마나를 소비해 스킬을 사용합니다. "
+					+ "	현재 마나 : "  +  getMp());
+			System.out.println("======================");
+		}
+		
+		if(m.getHp() <= 0) {
+			System.out.println("이미 죽은 " +m.getName()  +" 를 공격할 수 없습니다.");
+			return;
+		}
+		m.doBattle(this.satk);
+		if(m.getAtk() > (this.hp + this.def)) {
+			System.out.println("유저가 사망했습니다.");
+			return;
+		}
+		if(m.getHp() <= 0) {
+			setExp(m.getExp() + getExp());
+			System.out.println("경험치를 " + m.getExp() + " 획득했습니다.");
+
+		}
+		this.hp = (this.hp - this.def) - m.getAtk();
+		System.out.println(m.getName() + "와의 교전 완료!");
+		
+		
+		
+	}
 	
 	
 }

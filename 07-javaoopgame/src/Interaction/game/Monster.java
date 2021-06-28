@@ -15,12 +15,14 @@ public class Monster {
 	private int atk;
 	private int def;
 	private String name;
+	private int exp;
 	
-	public Monster(int hp, int atk, int def, String name) {
+	public Monster(int hp, int atk, int def, String name, int exp) {
 		this.hp = hp;
 		this.atk = atk;
 		this.def = def;
 		this.name = name;
+		this.exp = exp;
 	}
 	
 	public void doBattle(int uAtk) {
@@ -30,11 +32,30 @@ public class Monster {
 		}
 	}
 	
+	public void doBattle(int sAtk, String sName) {
+		this.hp = (this.hp + this.def) - sAtk;
+		if(this.hp <= 0) {
+			System.out.println(name + "은/는 이미 죽었습니다.");
+		}
+	}
+	
+	
 	public int getAtk() {
 		return this.atk;
 	}
 	public int getHp() {
 		return this.hp;
+	}
+	public String getName() {
+		return this.name;
+	}
+	
+	public int getExp() {
+		return this.exp;
+	}
+
+	public void setExp(int exp) {
+		this.exp = exp;
 	}
 	
 	

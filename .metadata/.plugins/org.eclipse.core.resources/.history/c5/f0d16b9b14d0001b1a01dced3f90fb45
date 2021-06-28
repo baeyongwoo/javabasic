@@ -1,9 +1,0 @@
-package structure;
-
-public class Person {
-	//자바에서 표현할 사람의 필수 정보를 변수로 선언
-	public String name;
-	public int age;
-	public String pNum;
-	
-}

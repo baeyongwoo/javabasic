@@ -6,12 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="kiwi"/>
+		<item key="selection" value="Archer"/>
 		<list key="findhistory">
+			<item value="Night"/>
 			<item value="Mango"/>
 			<item value="chobo"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Archer"/>
 			<item value="kiwi"/>
 			<item value="c1"/>
 		</list>
