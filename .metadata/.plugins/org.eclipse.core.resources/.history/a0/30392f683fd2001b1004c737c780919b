@@ -1,7 +1,0 @@
-package structure;
-
-public class ClassMain2 {
-	public static void main(String[] args) {
-		School st = School("김철수", 15, 45);
-	}
-}

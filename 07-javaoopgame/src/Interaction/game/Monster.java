@@ -1,6 +1,6 @@
 package Interaction.game;
 
-public class Monster {
+public abstract class Monster {
 	/*
 	 * 모든 몬스터는 Monster.java라는 부모 클래스 가짐
 	 * 이 클래스의 상속을 받아서 몬스터를 만들면
@@ -25,19 +25,19 @@ public class Monster {
 		this.exp = exp;
 	}
 	
-	public void doBattle(int uAtk) {
-		this.hp = (this.hp + this.def) - uAtk;
-		if(this.hp <= 0) {
-			System.out.println(name + "은/는 이미 죽었습니다.");
-		}
-	}
+	public  abstract void  doBattle(int uAtk); //{
+//		this.hp = (this.hp + this.def) - uAtk;
+//		if(this.hp <= 0) {
+//			System.out.println(name + "은/는 이미 죽었습니다.");
+//		}
+//	}
 	
-	public void doBattle(int sAtk, String sName) {
-		this.hp = (this.hp + this.def) - sAtk;
-		if(this.hp <= 0) {
-			System.out.println(name + "은/는 이미 죽었습니다.");
-		}
-	}
+	public  abstract void doBattle(int sAtk, String sName);// {
+//		this.hp = (this.hp + this.def) - sAtk;
+//		if(this.hp <= 0) {
+//			System.out.println(name + "은/는 이미 죽었습니다.");
+//		}
+//	}
 	
 	
 	public int getAtk() {
@@ -56,6 +56,14 @@ public class Monster {
 
 	public void setExp(int exp) {
 		this.exp = exp;
+	}
+
+	public int getDef() {
+		return def;
+	}
+
+	public void setDef(int def) {
+		this.def = def;
 	}
 	
 	

@@ -1,5 +1,0 @@
-package Inheritance.game;
-
-public class Archer {
-	public int Street;
-}

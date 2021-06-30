@@ -1,9 +1,0 @@
-package inheritance;
-
-//상속 문법
-//클래스명칭 오른쪽에 extens <부모클래스이름>을 적는다
-//이렇게 상속을 한 클래스는 부모, 자식 클래스가 하나의 객체 내부에
-//공존하는 형태로 메모리에 생성
-public class Salaryman extends Person{
-
-}

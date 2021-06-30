@@ -9,9 +9,6 @@ public class Main3 {
 	static Assassin as1 = new Assassin();
 	static Warrior w1 = new Warrior();
 	static Magician m1 = new Magician();
-	static String sk;
-	static String ch;
-
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
@@ -92,8 +89,8 @@ public class Main3 {
 						case "O": Orc o1 = new Orc();
 						System.out.println("오크가 선택되었습니다.");
 						System.out.println("기본 공격은 (A)ttack 스킬 사용은 (S)kill 사냥종료는 (Q)uit");
-						sk = scan.next();
-							switch (sk) {
+						String sk1 = scan.next();
+							switch (sk1) {
 								case "A": m1.hunt(o1);
 								break;
 								case "S" : m1.skillAtack(o1);
@@ -106,7 +103,10 @@ public class Main3 {
 							}//Orc 생성후 내부 사냥로직
 					break;
 					case "T": Troll t1 = new Troll();
-							switch (sk) {
+						System.out.println("트롤이 선택되었습니다.");
+						System.out.println("기본 공격은 (A)ttack 스킬 사용은 (S)kill 사냥종료는 (Q)uit");
+							String sk11 = scan.next();
+							switch (sk11) {
 							case "A": m1.hunt(t1);
 							break;
 							case "S" : m1.skillAtack(t1);
@@ -119,7 +119,10 @@ public class Main3 {
 						}//troll 생성호 내부 사냥로직
 					break;
 					case "D": Dragon d1 = new Dragon();
-							switch (sk) {
+						System.out.println("드래곤이 선택되었습니다.");
+						System.out.println("기본 공격은 (A)ttack 스킬 사용은 (S)kill 사냥종료는 (Q)uit");
+						String sk1111 = scan.next();
+							switch (sk111) {
 							case "A": m1.hunt(d1);
 							break;
 							case "S" : m1.skillAtack(d1);
@@ -132,7 +135,7 @@ public class Main3 {
 				}//드래곤 생성호 내부 사냥로직
 					break;
 					case "K": Krilla k1 = new Krilla();
-						switch (sk) {
+						switch (sk11) {
 							case "A": m1.hunt(k1);
 							break;
 							case "S" : m1.skillAtack(k1);
@@ -150,10 +153,10 @@ public class Main3 {
 				while(true) {
 					System.out.println("어떤 몬스터를 잡겠습니까?");
 					System.out.println("(O)rc / (T)roll / (D)ragon / (K)rilla");
-//					String ch = scan.next();
-//					ch = ch.toUpperCase();
+					String ch = scan.next();
+					ch = ch.toUpperCase();
 					ch = scan.next();
-					sk = scan.next();
+					String sk = scan.next();
 					ch = ch.toUpperCase();
 					sk = sk.toUpperCase();
 					switch (ch) {
@@ -214,8 +217,8 @@ public class Main3 {
 				while(true) {
 					System.out.println("어떤 몬스터를 잡겠습니까?");
 					System.out.println("(O)rc / (T)roll / (D)ragon / (K)rilla");
-					ch = scan.next();
-					sk = scan.next();
+					String ch = scan.next();
+					String sk = scan.next();
 					ch = ch.toUpperCase();
 					sk = sk.toUpperCase();
 					switch (ch) {
@@ -276,15 +279,14 @@ public class Main3 {
 				while(true) {
 					System.out.println("어떤 몬스터를 잡겠습니까?");
 					System.out.println("(O)rc / (T)roll / (D)ragon / (K)rilla");
-					ch = scan.next();
-				
+					String ch = scan.next();
+					String sk = scan.next();
+					sk = sk.toUpperCase();
 					ch = ch.toUpperCase();
-				
 					switch (ch) {
 						case "O": Orc o4 = new Orc();
 						System.out.println("기본 공격은 (A)ttack 스킬 사용은 (S)kill 사냥종료는 (Q)uit");
-						String sk = scan.next();
-						sk = sk.toUpperCase();
+						
 							switch (sk) {
 								case "A": m1.hunt(o4);
 								break;
@@ -298,7 +300,7 @@ public class Main3 {
 							}//Orc 생성후 내부 사냥로직
 					case "T": Troll t4 = new Troll();
 					System.out.println("기본 공격은 (A)ttack 스킬 사용은 (S)kill 사냥종료는 (Q)uit");
-					sk = scan.next();
+				
 						switch (sk) {
 							case "A": m1.hunt(t4);
 							break;

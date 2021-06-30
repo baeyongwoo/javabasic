@@ -1,5 +1,0 @@
-package GBBGame;
-
-public class Com {
-	String [] MNOG = {"가위", "바위", "보"};
-}
