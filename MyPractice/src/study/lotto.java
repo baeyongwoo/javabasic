@@ -11,29 +11,30 @@ public class lotto {
 	public static final int LOTTOSIZE = 6;
 	public static int [] lotto = new int[LOTTOSIZE];	//6개의 배열 생성 0~5번 인덱스
 
-//
-//	public static int[] lottoRandom(int [] lotto) {
-//		for(int i = 0; i < LOTTOSIZE; i++) {	//0~6인덱스에 저장
-//			lotto[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
-//			for(int j =0; j < i; j++) {	//내부 for를 사용해서 중복검사
-//				if(lotto[i]==lotto[j]) {//중복되는지 검사
-//					//lotto_ov[j] = lotto[i];
-//					i--;	//중복되면 하나 감소해서 다시 뽑게 만들기
-//
-//
-//				}
-//			}
-//		}
-//		Arrays.sort(lotto);
-//		System.out.println(Arrays.toString(lotto));
-//		return lotto;
-//	}
+
+	public static int[] lottoRandom(int [] lotto) {
+		for(int i = 0; i < LOTTOSIZE; i++) {	//0~6인덱스에 저장
+			lotto[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
+			for(int j =0; j < i; j++) {	//내부 for를 사용해서 중복검사
+				if(lotto[i]==lotto[j]) {//중복되는지 검사
+					//lotto_ov[j] = lotto[i];
+					i--;	//중복되면 하나 감소해서 다시 뽑게 만들기
+
+
+				}
+			}
+		}
+		Arrays.sort(lotto);
+		System.out.println(Arrays.toString(lotto));
+		return lotto;
+	}
 
 
 	public static void main(String[] args) {
-
+		
 		while(true) {
-			int [] buylot = new int[6];
+			int money = 0;
+			int [] buylot = new int[LOTTOSIZE];
 			for(int i = 0; i < LOTTOSIZE; i++) {	//0~6인덱스에 저장
 				buylot[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
 				for(int j =0; j < i; j++) {	//내부 for를 사용해서 중복검사
@@ -44,26 +45,23 @@ public class lotto {
 
 					}
 				}
+				money += 1000;
 			}
 			
-			for(int i = 0; i < LOTTOSIZE; i++) {	//0~6인덱스에 저장
-				lotto[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
-				for(int j =0; j < i; j++) {	//내부 for를 사용해서 중복검사
-					if(lotto[i]==lotto[j]) {//중복되는지 검사
-						//lotto_ov[j] = lotto[i];
-						i--;	//중복되면 하나 감소해서 다시 뽑게 만들기
-
-
-					}
-				}
-			}
+	
+			lottoRandom(lotto);
 			Arrays.sort(buylot);
+			Arrays.sort(lotto);
 			System.out.println(Arrays.toString(buylot));
 			if(Arrays.toString(buylot).equals(Arrays.toString(lotto))) {
 				System.out.println("당첨번호 : " + Arrays.toString(buylot));
+				System.out.println("1등되려면 금액 : " + money);
 				break;
 			}
+			
 		}
+		
+		
 		
 
 
@@ -71,46 +69,13 @@ public class lotto {
 
 	}
 }
-//		while(true) {
-//			for(int i = 0; i < buylot.length; i++) {	//0~6인덱스에 저장
-//				buylot[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
-//				for(int j =0; j < i; j++) {	//내부 for를 사용해서 중복검사
-//					if(buylot[i]==buylot[j]) {//중복되는지 검사
-//						//lotto_ov[j] = lotto[i];
-//						i--;	//중복되면 하나 감소해서 다시 뽑게 만들기
-//
-//
-//					}
-//				}
-//			}
-//			Arrays.sort(lotto);
-//			Arrays.sort(buylot);
-//			System.out.println(Arrays.toString(buylot));
-//			
-//			if(Arrays.toString(buylot).equals(lotto)) {
-//				System.out.println("당첨되었습니다.");
-//				break;
-//			}
-//			
-//	}
-//System.out.println("로또 당첨 번호");
-//System.out.println(Arrays.toString(lotto));
-//	}
 
 
 
 
 
 
-//			try {
-//				if(lotto[i]==lotto[i+1]) {
-//					i--;
-//					lotto[i] = (int)(Math.random()*45) + 1;
-//				}
-//				
-//			} catch (ArrayIndexOutOfBoundsException e) {
-//				System.out.println("로또 번호는 6개 입니다.");
-//			}
+
 
 
 

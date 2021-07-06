@@ -1,0 +1,16 @@
+package stringbuilder1;
+
+public class Builder8 {
+
+	public static void main(String[] args) {
+		//reverse()는 문자열을 인덱스 순으로 따졋을 때
+		//역순으로 나열
+		StringBuilder str = new StringBuilder("zyxwvut");
+		
+		str.reverse();
+		
+		System.out.println(str);
+		
+	}
+
+}

@@ -20,10 +20,10 @@ public class String3 {
 		String voca = scan.nextLine();
 		
  		int fidx = -1;
-		boolean bool = true;
+ 		boolean bool = true;	//boolean을 만들어서 탈출구문에 넣는 것
 		while(bool) {
-			int get = all.indexOf(voca, fidx + 1);
-			if(get == -1) {
+			int get = all.indexOf(voca, fidx + 1); //인덱스 
+			if(get == -1) {	//추출했을때 발견을 못할경우 -1을 리턴하기 때문에
 				bool = false;
 			}else {
 				fidx = get;
