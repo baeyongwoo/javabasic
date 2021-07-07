@@ -13,27 +13,23 @@ public class lotto {
 
 
 	public static int[] lottoRandom(int [] lotto) {
-		for(int i = 0; i < LOTTOSIZE; i++) {	//0~6인덱스에 저장
-			lotto[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
-			for(int j =0; j < i; j++) {	//내부 for를 사용해서 중복검사
-				if(lotto[i]==lotto[j]) {//중복되는지 검사
-					//lotto_ov[j] = lotto[i];
-					i--;	//중복되면 하나 감소해서 다시 뽑게 만들기
-
-
+		for(int i = 0; i < LOTTOSIZE; i++) {	
+			lotto[i] = (int)(Math.random()*45) + 1;	
+			for(int j =0; j < i; j++) {	
+				if(lotto[i]==lotto[j]) {
+					i--;
 				}
 			}
 		}
 		Arrays.sort(lotto);
-		System.out.println(Arrays.toString(lotto));
+		//System.out.println(Arrays.toString(lotto));
 		return lotto;
 	}
-
-
 	public static void main(String[] args) {
-		
-		while(true) {
-			int money = 0;
+		int money = 0;
+		boolean flag = true;
+		while(flag) {
+			
 			int [] buylot = new int[LOTTOSIZE];
 			for(int i = 0; i < LOTTOSIZE; i++) {	//0~6인덱스에 저장
 				buylot[i] = (int)(Math.random()*45) + 1;	//1~45까지 랜덤을 추출해서 i인덱스에 저장
@@ -41,31 +37,21 @@ public class lotto {
 					if(buylot[i]==buylot[j]) {//중복되는지 검사
 						//lotto_ov[j] = lotto[i];
 						i--;	//중복되면 하나 감소해서 다시 뽑게 만들기
-
-
 					}
 				}
 				money += 1000;
 			}
-			
-	
 			lottoRandom(lotto);
 			Arrays.sort(buylot);
-			Arrays.sort(lotto);
+			
 			System.out.println(Arrays.toString(buylot));
 			if(Arrays.toString(buylot).equals(Arrays.toString(lotto))) {
 				System.out.println("당첨번호 : " + Arrays.toString(buylot));
 				System.out.println("1등되려면 금액 : " + money);
-				break;
+				flag = false;
 			}
 			
 		}
-		
-		
-		
-
-
-
 
 	}
 }

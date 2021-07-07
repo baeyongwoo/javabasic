@@ -1,9 +1,0 @@
-package polymorphism;
-
-public class Main {
-	public static void main(String[] args) {
-		
-		Person t1 = new teacher("홍길동", 26, 3, "텔레포트");
-		Person s1 = new Student("제자", 15, 4);
-	}
-}

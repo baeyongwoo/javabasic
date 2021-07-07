@@ -10,7 +10,9 @@ public class Main {
 		System.out.print("가위 바위 보! >> (종료는 q입니다.)");
 		String ip = User.usershow();
 		String com = Com.show();
-		if(ip.equals("q") || ip.equals("Q") || ip.equals("ㅂ")) {
+		//if(ip.equals("q") || ip.equals("Q") || ip.equals("ㅂ"))
+		if(ip.toUpperCase().equals("Q") || ip.equals("ㅂ"))
+		{
 			break;
 		}
 		

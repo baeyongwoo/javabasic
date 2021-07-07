@@ -1,9 +1,0 @@
-package polymorphism;
-
-public class Principal extends Person{
-	private String school_name;
-	
-	public Principal() {
-		super(name, age);
-	}
-}
