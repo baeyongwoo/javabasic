@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="accessmodifier2.Child"/>
-<fullyQualifiedTypeName name="accessmodifier3.Child2"/>
-<fullyQualifiedTypeName name="accessmodifier2.Parent"/>
-<fullyQualifiedTypeName name="accessmodifier.game.wizard"/>
-<fullyQualifiedTypeName name="accessmodifier.game.JobInfo"/>
-<fullyQualifiedTypeName name="GetBMI"/>
-<fullyQualifiedTypeName name="accessmodifier.game.Night"/>
-<fullyQualifiedTypeName name="accessmodifier.game.Wizard"/>
-<fullyQualifiedTypeName name="buyandsell.Seller"/>
-<fullyQualifiedTypeName name="buyandsell.kiwiSeller"/>
-<fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="buyandsell.Buyer"/>
-<fullyQualifiedTypeName name="Interaction.game.night"/>
-<fullyQualifiedTypeName name="Interaction.game.monsterA"/>
 <fullyQualifiedTypeName name="Interaction.game.krilla"/>
 <fullyQualifiedTypeName name="polymorphism.Student"/>
 <fullyQualifiedTypeName name="polymorphism.teacher"/>
@@ -23,7 +9,6 @@
 <fullyQualifiedTypeName name="accessmodifier.game.Commoner"/>
 <fullyQualifiedTypeName name="java.awt.image.AreaAveragingScaleFilter"/>
 <fullyQualifiedTypeName name="lotto"/>
-<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="Interaction.game.Skill"/>
 <fullyQualifiedTypeName name="Interaction.game.Archer"/>
 <fullyQualifiedTypeName name="accessmodifier.game.Archer"/>
@@ -51,13 +36,28 @@
 <fullyQualifiedTypeName name="interface1.Vehicle"/>
 <fullyQualifiedTypeName name="interface1.Auto_bicycle"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+<fullyQualifiedTypeName name="javax.sound.sampled.ReverbType"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.lang.SecurityException"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="random1.Random1"/>
+<fullyQualifiedTypeName name="colloection1.ArrayList1"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="colloection1.ArraysList2"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.security.SecureRandom"/>
+<fullyQualifiedTypeName name="colloection1.Lotto1"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 </qualifiedTypeNameHistroy>
