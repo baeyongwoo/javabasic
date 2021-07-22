@@ -6,6 +6,7 @@ public class Jdbcupdate {
 	public static void main(String[] args) {
 		Connection conn = null;
 		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		
 		
 		Scanner scan = new Scanner(System.in);
@@ -20,10 +21,14 @@ public class Jdbcupdate {
 			
 			//update jdbcinsert set str=str where num = num
 			stmt = conn.createStatement();
-			String sql = "UPDATE JDBCInsert SET str = '" + str + "' WHERE num = '" + num + "';"; 
+			String sql = "UPDATE JDBCInsert SET str = '?' WHERE num = '?'";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(num, 2);
+			
+			
 			System.out.println(sql);
 			
-			stmt.executeUpdate(sql);
+			pstmt.executeUpdate(sql);
 			
 		} catch (SQLException e) {
 			System.out.println("에러 : " + e);

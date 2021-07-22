@@ -28,7 +28,7 @@ public class JdbcSelect2 {
 			stmt = con.createStatement();
 
 			String sql = "SELECT emp_no, first_name, hire_date FROM employees";
-				
+			
 			rs = stmt.executeQuery(sql);
 			int num = 0;
 			while(rs.next()) {
